@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5621B88A17D1F11D005AC5A9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B88917D1F11D005AC5A9 /* Icon@2x.png */; };
+		5621B88C17D1F120005AC5A9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B88B17D1F120005AC5A9 /* Icon.png */; };
+		5621B88E17D1F2B7005AC5A9 /* 65-note.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B88D17D1F2B7005AC5A9 /* 65-note.png */; };
+		5621B89117D22AD0005AC5A9 /* FFUSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5621B89017D22AD0005AC5A9 /* FFUSViewController.m */; };
+		5621B89317D23B1C005AC5A9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B89217D23B1C005AC5A9 /* Default@2x.png */; };
+		5621B89517D23B24005AC5A9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B89417D23B24005AC5A9 /* Default-568h@2x.png */; };
+		5621B89717D23B27005AC5A9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B89617D23B27005AC5A9 /* Default.png */; };
+		5621B89A17D24EBA005AC5A9 /* flag_australia.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B89917D24EBA005AC5A9 /* flag_australia.png */; };
+		5621B89C17D24EE0005AC5A9 /* flag_usa.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B89B17D24EE0005AC5A9 /* flag_usa.png */; };
+		5621B89E17D2C5FF005AC5A9 /* 137-presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = 5621B89D17D2C5FF005AC5A9 /* 137-presentation.png */; };
+		5621B8A117D2C669005AC5A9 /* FFMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5621B8A017D2C669005AC5A9 /* FFMoreViewController.m */; };
+		5621B8A917D2D994005AC5A9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5621B8A817D2D994005AC5A9 /* MessageUI.framework */; };
+		56540A0017FA876D00286381 /* FFAUDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 565409FF17FA876D00286381 /* FFAUDetailViewController.m */; };
+		56A9422C17F921890095AC34 /* FFCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56A9422B17F921890095AC34 /* FFCell.m */; };
+		56EF569817D0A731001C64CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EF569717D0A731001C64CD /* UIKit.framework */; };
+		56EF569A17D0A731001C64CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EF569917D0A731001C64CD /* Foundation.framework */; };
+		56EF569C17D0A731001C64CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EF569B17D0A731001C64CD /* CoreGraphics.framework */; };
+		56EF56A217D0A731001C64CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56EF56A017D0A731001C64CD /* InfoPlist.strings */; };
+		56EF56A417D0A731001C64CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EF56A317D0A731001C64CD /* main.m */; };
+		56EF56A817D0A731001C64CD /* FFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EF56A717D0A731001C64CD /* FFAppDelegate.m */; };
+		56EF56B117D0A731001C64CD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EF56AF17D0A731001C64CD /* MainStoryboard.storyboard */; };
+		56EF56B417D0A731001C64CD /* FFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56EF56B317D0A731001C64CD /* FFViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5621B88917D1F11D005AC5A9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		5621B88B17D1F120005AC5A9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		5621B88D17D1F2B7005AC5A9 /* 65-note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "65-note.png"; path = "../../glyphish-icons/PNG icons/65-note.png"; sourceTree = "<group>"; };
+		5621B88F17D22AD0005AC5A9 /* FFUSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFUSViewController.h; path = MusicFinder/FFUSViewController.h; sourceTree = "<group>"; };
+		5621B89017D22AD0005AC5A9 /* FFUSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFUSViewController.m; path = MusicFinder/FFUSViewController.m; sourceTree = "<group>"; };
+		5621B89217D23B1C005AC5A9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		5621B89417D23B24005AC5A9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		5621B89617D23B27005AC5A9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		5621B89917D24EBA005AC5A9 /* flag_australia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flag_australia.png; path = "../../iconset-addictive-flavour-set/png files/flags/flag_australia.png"; sourceTree = "<group>"; };
+		5621B89B17D24EE0005AC5A9 /* flag_usa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flag_usa.png; path = "../../iconset-addictive-flavour-set/png files/flags/flag_usa.png"; sourceTree = "<group>"; };
+		5621B89D17D2C5FF005AC5A9 /* 137-presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "137-presentation.png"; path = "../../glyphish-icons/PNG icons/137-presentation.png"; sourceTree = "<group>"; };
+		5621B89F17D2C669005AC5A9 /* FFMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FFMoreViewController.h; path = MusicFinder/FFMoreViewController.h; sourceTree = "<group>"; };
+		5621B8A017D2C669005AC5A9 /* FFMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FFMoreViewController.m; path = MusicFinder/FFMoreViewController.m; sourceTree = "<group>"; };
+		5621B8A817D2D994005AC5A9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		565409FE17FA876D00286381 /* FFAUDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAUDetailViewController.h; sourceTree = "<group>"; };
+		565409FF17FA876D00286381 /* FFAUDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAUDetailViewController.m; sourceTree = "<group>"; };
+		56A9422A17F921890095AC34 /* FFCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCell.h; sourceTree = "<group>"; };
+		56A9422B17F921890095AC34 /* FFCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCell.m; sourceTree = "<group>"; };
+		56EF569417D0A731001C64CD /* MusicFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56EF569717D0A731001C64CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		56EF569917D0A731001C64CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		56EF569B17D0A731001C64CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		56EF569F17D0A731001C64CD /* MusicFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MusicFinder-Info.plist"; path = "MusicFinder/MusicFinder-Info.plist"; sourceTree = "<group>"; };
+		56EF56A117D0A731001C64CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		56EF56A317D0A731001C64CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MusicFinder/main.m; sourceTree = "<group>"; };
+		56EF56A517D0A731001C64CD /* MusicFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MusicFinder-Prefix.pch"; path = "MusicFinder/MusicFinder-Prefix.pch"; sourceTree = "<group>"; };
+		56EF56A617D0A731001C64CD /* FFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FFAppDelegate.h; path = MusicFinder/FFAppDelegate.h; sourceTree = "<group>"; };
+		56EF56A717D0A731001C64CD /* FFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FFAppDelegate.m; path = MusicFinder/FFAppDelegate.m; sourceTree = "<group>"; };
+		56EF56A917D0A731001C64CD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		56EF56B017D0A731001C64CD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		56EF56B217D0A731001C64CD /* FFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FFViewController.h; path = MusicFinder/FFViewController.h; sourceTree = "<group>"; };
+		56EF56B317D0A731001C64CD /* FFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FFViewController.m; path = MusicFinder/FFViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		56EF569117D0A731001C64CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5621B8A917D2D994005AC5A9 /* MessageUI.framework in Frameworks */,
+				56EF569817D0A731001C64CD /* UIKit.framework in Frameworks */,
+				56EF569A17D0A731001C64CD /* Foundation.framework in Frameworks */,
+				56EF569C17D0A731001C64CD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5621B8AA17D2EF81005AC5A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56EF56A017D0A731001C64CD /* InfoPlist.strings */,
+				56EF56A517D0A731001C64CD /* MusicFinder-Prefix.pch */,
+				56EF569F17D0A731001C64CD /* MusicFinder-Info.plist */,
+				56EF56A317D0A731001C64CD /* main.m */,
+				56EF56A617D0A731001C64CD /* FFAppDelegate.h */,
+				56EF56A717D0A731001C64CD /* FFAppDelegate.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5621B8AB17D2EFB9005AC5A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56EF56AF17D0A731001C64CD /* MainStoryboard.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5621B8AC17D2EFC3005AC5A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				565409FD17FA7A8400286381 /* Info */,
+				565409FC17FA7A7700286381 /* US */,
+				565409FB17FA7A5300286381 /* AU */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		565409FB17FA7A5300286381 /* AU */ = {
+			isa = PBXGroup;
+			children = (
+				56A9422A17F921890095AC34 /* FFCell.h */,
+				56A9422B17F921890095AC34 /* FFCell.m */,
+				56EF56B317D0A731001C64CD /* FFViewController.m */,
+				56EF56B217D0A731001C64CD /* FFViewController.h */,
+				565409FE17FA876D00286381 /* FFAUDetailViewController.h */,
+				565409FF17FA876D00286381 /* FFAUDetailViewController.m */,
+			);
+			name = AU;
+			sourceTree = "<group>";
+		};
+		565409FC17FA7A7700286381 /* US */ = {
+			isa = PBXGroup;
+			children = (
+				5621B88F17D22AD0005AC5A9 /* FFUSViewController.h */,
+				5621B89017D22AD0005AC5A9 /* FFUSViewController.m */,
+			);
+			name = US;
+			sourceTree = "<group>";
+		};
+		565409FD17FA7A8400286381 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				5621B89F17D2C669005AC5A9 /* FFMoreViewController.h */,
+				5621B8A017D2C669005AC5A9 /* FFMoreViewController.m */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		56EF568B17D0A731001C64CD = {
+			isa = PBXGroup;
+			children = (
+				56EF569E17D0A731001C64CD /* Supporting Files */,
+				5621B8AC17D2EFC3005AC5A9 /* Controller */,
+				5621B8AB17D2EFB9005AC5A9 /* View */,
+				5621B8AA17D2EF81005AC5A9 /* Model */,
+				56EF569617D0A731001C64CD /* Frameworks */,
+				56EF569517D0A731001C64CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		56EF569517D0A731001C64CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				56EF569417D0A731001C64CD /* MusicFinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		56EF569617D0A731001C64CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5621B8A817D2D994005AC5A9 /* MessageUI.framework */,
+				56EF569717D0A731001C64CD /* UIKit.framework */,
+				56EF569917D0A731001C64CD /* Foundation.framework */,
+				56EF569B17D0A731001C64CD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56EF569E17D0A731001C64CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5621B89D17D2C5FF005AC5A9 /* 137-presentation.png */,
+				5621B89B17D24EE0005AC5A9 /* flag_usa.png */,
+				5621B89917D24EBA005AC5A9 /* flag_australia.png */,
+				5621B89617D23B27005AC5A9 /* Default.png */,
+				5621B89417D23B24005AC5A9 /* Default-568h@2x.png */,
+				5621B89217D23B1C005AC5A9 /* Default@2x.png */,
+				5621B88D17D1F2B7005AC5A9 /* 65-note.png */,
+				5621B88B17D1F120005AC5A9 /* Icon.png */,
+				5621B88917D1F11D005AC5A9 /* Icon@2x.png */,
+				56EF56A917D0A731001C64CD /* Default.png */,
+			);
+			name = "Supporting Files";
+			path = MusicFinder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		56EF569317D0A731001C64CD /* MusicFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 56EF56B717D0A731001C64CD /* Build configuration list for PBXNativeTarget "MusicFinder" */;
+			buildPhases = (
+				56EF569017D0A731001C64CD /* Sources */,
+				56EF569117D0A731001C64CD /* Frameworks */,
+				56EF569217D0A731001C64CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicFinder;
+			productName = MusicFinder;
+			productReference = 56EF569417D0A731001C64CD /* MusicFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		56EF568C17D0A731001C64CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FF;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Fangzhou He";
+				TargetAttributes = {
+					56EF569317D0A731001C64CD = {
+						DevelopmentTeam = 8LELQL34M8;
+					};
+				};
+			};
+			buildConfigurationList = 56EF568F17D0A731001C64CD /* Build configuration list for PBXProject "MusicFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 56EF568B17D0A731001C64CD;
+			productRefGroup = 56EF569517D0A731001C64CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56EF569317D0A731001C64CD /* MusicFinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56EF569217D0A731001C64CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56EF56A217D0A731001C64CD /* InfoPlist.strings in Resources */,
+				56EF56B117D0A731001C64CD /* MainStoryboard.storyboard in Resources */,
+				5621B88A17D1F11D005AC5A9 /* Icon@2x.png in Resources */,
+				5621B88C17D1F120005AC5A9 /* Icon.png in Resources */,
+				5621B88E17D1F2B7005AC5A9 /* 65-note.png in Resources */,
+				5621B89317D23B1C005AC5A9 /* Default@2x.png in Resources */,
+				5621B89517D23B24005AC5A9 /* Default-568h@2x.png in Resources */,
+				5621B89717D23B27005AC5A9 /* Default.png in Resources */,
+				5621B89A17D24EBA005AC5A9 /* flag_australia.png in Resources */,
+				5621B89C17D24EE0005AC5A9 /* flag_usa.png in Resources */,
+				5621B89E17D2C5FF005AC5A9 /* 137-presentation.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56EF569017D0A731001C64CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56EF56A417D0A731001C64CD /* main.m in Sources */,
+				56540A0017FA876D00286381 /* FFAUDetailViewController.m in Sources */,
+				56EF56A817D0A731001C64CD /* FFAppDelegate.m in Sources */,
+				56EF56B417D0A731001C64CD /* FFViewController.m in Sources */,
+				5621B89117D22AD0005AC5A9 /* FFUSViewController.m in Sources */,
+				5621B8A117D2C669005AC5A9 /* FFMoreViewController.m in Sources */,
+				56A9422C17F921890095AC34 /* FFCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		56EF56A017D0A731001C64CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56EF56A117D0A731001C64CD /* en */,
+			);
+			name = InfoPlist.strings;
+			path = MusicFinder;
+			sourceTree = "<group>";
+		};
+		56EF56AF17D0A731001C64CD /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56EF56B017D0A731001C64CD /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			path = MusicFinder;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		56EF56B517D0A731001C64CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		56EF56B617D0A731001C64CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		56EF56B817D0A731001C64CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicFinder/MusicFinder-Prefix.pch";
+				INFOPLIST_FILE = "MusicFinder/MusicFinder-Info.plist";
+				PRODUCT_NAME = MusicFinder;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		56EF56B917D0A731001C64CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MusicFinder/MusicFinder-Prefix.pch";
+				INFOPLIST_FILE = "MusicFinder/MusicFinder-Info.plist";
+				PRODUCT_NAME = MusicFinder;
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56EF568F17D0A731001C64CD /* Build configuration list for PBXProject "MusicFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56EF56B517D0A731001C64CD /* Debug */,
+				56EF56B617D0A731001C64CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		56EF56B717D0A731001C64CD /* Build configuration list for PBXNativeTarget "MusicFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				56EF56B817D0A731001C64CD /* Debug */,
+				56EF56B917D0A731001C64CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 56EF568C17D0A731001C64CD /* Project object */;
+}
