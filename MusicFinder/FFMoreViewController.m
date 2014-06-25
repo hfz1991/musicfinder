@@ -29,7 +29,7 @@
     [super viewDidLoad];
     introLabel.numberOfLines=0;
 	//[introLabel sizeToFit];
-    introLabel.text=@"Find out the latest top 10 Albums any time, any where!\n\nMusic Finder is a link between you and the hotest alblums in your country.";
+    introLabel.text=@"-Find out the latest top 10 Albums any time, any where!\n\n-Add your favorite album\n\n-Search the song";
     contactLabel.numberOfLines=0;
     contactLabel.text=@"Thank you for your supporting to this App!It will keep update \nand waiting for your sincerely advise.\n\nMy Email:\nfunzho@hotmail.com";
 }

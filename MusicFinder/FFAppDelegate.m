@@ -1,6 +1,6 @@
 //
 //  FFAppDelegate.m
-//  jsonTute
+//  MusicFinder
 //
 //  Created by Fangzhou He on 13-8-30.
 //  Copyright (c) 2013年 Fangzhou He. All rights reserved.
@@ -10,9 +10,20 @@
 
 @implementation FFAppDelegate
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+@synthesize historymanagedObjectContext = _historymanagedObjectContext;
+@synthesize historymanagedObjectModel = _historymanagedObjectModel;
+@synthesize historypersistentStoreCoordinator = _historypersistentStoreCoordinator;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     // Override point for customization after application launch.
+    
+    
     return YES;
 }
 							
@@ -43,4 +54,96 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+//Favorite
+-(NSManagedObjectModel *)managedObjectModel
+{
+    if (_managedObjectModel != nil) {
+        return _managedObjectModel;
+    }
+    
+    NSURL *modeURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    _managedObjectModel=[[NSManagedObjectModel alloc]initWithContentsOfURL:modeURL];
+    return _managedObjectModel;
+}
+
+-(NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
+    if (_persistentStoreCoordinator != nil) {
+        return _persistentStoreCoordinator;
+    }
+    
+    NSString *docs = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSURL *storeUrl = [NSURL fileURLWithPath:[docs stringByAppendingPathComponent:@"MusicFinder.sqlite"]];
+    NSError *error = nil;
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:[self managedObjectModel]];
+    
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+        NSLog(@"Error: %@,%@",error,[error userInfo]);
+    }
+    
+    return _persistentStoreCoordinator;
+}
+
+-(NSManagedObjectContext *)managedObjectContext
+{
+    if (_managedObjectContext != nil) {
+        return _managedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator =[self persistentStoreCoordinator];
+    
+    if (coordinator != nil) {
+        _managedObjectContext = [[NSManagedObjectContext alloc]init];
+        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    
+    return _managedObjectContext;
+}
+
+//History
+-(NSManagedObjectModel *)historymanagedObjectModel
+{
+    if (_historymanagedObjectModel != nil) {
+        return _historymanagedObjectModel;
+    }
+    
+    NSURL *modeURL = [[NSBundle mainBundle] URLForResource:@"History" withExtension:@"momd"];
+    _historymanagedObjectModel=[[NSManagedObjectModel alloc]initWithContentsOfURL:modeURL];
+    return _historymanagedObjectModel;
+}
+
+-(NSPersistentStoreCoordinator *)historypersistentStoreCoordinator
+{
+    if (_historypersistentStoreCoordinator != nil) {
+        return _historypersistentStoreCoordinator;
+    }
+    
+    NSString *docs = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSURL *storeUrl = [NSURL fileURLWithPath:[docs stringByAppendingPathComponent:@"MusicFinder.sqlite"]];
+    NSError *error = nil;
+    _historypersistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc]initWithManagedObjectModel:[self historymanagedObjectModel]];
+    
+    if (![_historypersistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+        NSLog(@"Error: %@,%@",error,[error userInfo]);
+    }
+    
+    return _historypersistentStoreCoordinator;
+}
+
+-(NSManagedObjectContext *)historymanagedObjectContext
+{
+    if (_historymanagedObjectContext != nil) {
+        return _historymanagedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator =[self historypersistentStoreCoordinator];
+    
+    if (coordinator != nil) {
+        _historymanagedObjectContext = [[NSManagedObjectContext alloc]init];
+        [_historymanagedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    
+    return _historymanagedObjectContext;
+}
 @end

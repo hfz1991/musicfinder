@@ -10,4 +10,15 @@
 
 @interface FFAUDetailViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *myCover;
+@property (weak, nonatomic) IBOutlet UILabel *albumsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistLabel;
+
+@property (strong, nonatomic) NSString *imageURL;
+@property (strong, nonatomic) NSString *albumName;
+@property (strong, nonatomic) NSString *artistName;
+
+
+- (IBAction)addFavorite:(id)sender;
+
 @end

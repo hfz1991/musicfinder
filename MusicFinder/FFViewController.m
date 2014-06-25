@@ -1,6 +1,6 @@
 //
 //  FFViewController.m
-//  jsonTute
+//  MusicFinder
 //
 //  Created by Fangzhou He on 13-8-30.
 //  Copyright (c) 2013年 Fangzhou He. All rights reserved.
@@ -8,6 +8,7 @@
 
 #import "FFViewController.h"
 #import "FFCell.h"
+#import "FFAUDetailViewController.h"
 @interface FFViewController ()
 {
     NSMutableData *onlineJsonData;
@@ -17,6 +18,7 @@
     NSMutableArray *indexArray;
     NSMutableArray *artistArray;
     NSMutableArray *imageUrlArray;
+    UIAlertView *connectAlert;
 }
 
 @end
@@ -50,12 +52,33 @@
              forControlEvents:UIControlEventValueChanged];
     [self.myTableView addSubview:refreshControl];
     
+    [resultArray removeAllObjects];
+    [artistArray removeAllObjects];
+    [indexArray removeAllObjects];
+    
+    //Request the connection
+    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/au/rss/topalbums/limit=10/json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    
+    if(connection)
+    {
+        if(onlineJsonData==NULL) onlineJsonData = [[NSMutableData alloc]init];
+        else [self.myTableView reloadData];
+        
+    }
+    connectAlert=[[UIAlertView alloc]initWithTitle:nil message:@"connecting" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [connectAlert show];
+    
 }
 
 -(void)didDragRefreshController
 {
 
     [resultArray removeAllObjects];
+    [artistArray removeAllObjects];
+    [indexArray removeAllObjects];
     
     NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/au/rss/topalbums/limit=10/json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -67,6 +90,8 @@
         if(onlineJsonData==NULL) onlineJsonData = [[NSMutableData alloc]init];
         else [self.myTableView reloadData];
     }
+    connectAlert=[[UIAlertView alloc]initWithTitle:nil message:@"connecting" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [connectAlert show];
     [refreshControl endRefreshing];
     
 }
@@ -86,13 +111,16 @@
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    [connectAlert dismissWithClickedButtonIndex:-1 animated:YES];
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Error: No connection!" message:@"Please check your connection and try again" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+    [alert show];
     NSLog(@"Error:(AU)Failed with connection error.");
     
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
+    [connectAlert dismissWithClickedButtonIndex:-1 animated:YES];
     NSDictionary *allDataDictionary = [NSJSONSerialization JSONObjectWithData:onlineJsonData options:0 error:nil];
     NSDictionary *feed = [allDataDictionary objectForKey:@"feed"];
     NSArray *arrayOfEntry = [feed objectForKey:@"entry"];
@@ -145,29 +173,41 @@
         cell= [[FFCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    //Download the image cover from the internet
+    /*
     NSData *imageData=[[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[imageUrlArray objectAtIndex:indexPath.row]]];
-    
     cell.myCover.image=[[UIImage alloc]initWithData:imageData];
+    */
     
-    cell.albumsLabel.text=[resultArray objectAtIndex:indexPath.row];
-    cell.artistLabel.text=[artistArray objectAtIndex:indexPath.row];
-    cell.rankLabel.text=[indexArray objectAtIndex:indexPath.row];
+    //Dispatch
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSData *imageData=[[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[imageUrlArray objectAtIndex:indexPath.row]]];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            cell.myCover.image=[[UIImage alloc]initWithData:imageData];
+        });
+    });
+    
+    
+    if (connection) {
+        cell.albumsLabel.text=[resultArray objectAtIndex:indexPath.row];
+        cell.artistLabel.text=[artistArray objectAtIndex:indexPath.row];
+        cell.rankLabel.text=[indexArray objectAtIndex:indexPath.row];
+    }
+    
     return cell;
 }
 
-- (IBAction)getAuButton:(id)sender {
-    
-    [resultArray removeAllObjects];
-    
-    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/au/rss/topalbums/limit=10/json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    connection = [NSURLConnection connectionWithRequest:request delegate:self];
-    
-    if(connection)
-    {
-        onlineJsonData = [[NSMutableData alloc]init];
-        
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"AUClickCellSegue"]) {
+        NSIndexPath *index=[myTableView indexPathForSelectedRow];
+        FFAUDetailViewController *vc=[segue destinationViewController];
+        vc.albumName=[resultArray objectAtIndex:index.row];
+        vc.artistName=[artistArray objectAtIndex:index.row];
+        vc.imageURL=[imageUrlArray objectAtIndex:index.row];
     }
 }
+
 @end
